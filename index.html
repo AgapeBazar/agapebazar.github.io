@@ -33,6 +33,13 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       /* Additional Styles for Modal */
       #productModal .modal-body {
@@ -284,9 +291,9 @@
       </div>
       <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <img src="imagenes/heart.png" height="30" />
-            <strong>Ágape</strong>
+          <a href="#" class="navbar-brand d-flex align-items-center" style="font-family: Alex Brush; font-size: 25px;">
+            <img src="imagenes/heart.png" height="24" />
+            <strong> Ágape</strong>
           </a>
           <button
             class="navbar-toggler"
@@ -314,8 +321,10 @@
       >
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light" style="color: whitesmoke;">Ágape: Regalos únicos</h1>
-            <p class="lead" style="color: whitesmoke;">
+            <h1 class="fw-light" style="font-family: Alex Brush; font-size: 40px; color: whitesmoke">
+              Ágape: Regalos únicos
+            </h1>
+            <p class="lead" style="color: whitesmoke">
               <strong
                 >Regalos personalizados con un toque especial. Escriba a nuestro
                 Whatsapp y le atendemos enseguida. Con domicilio dentro de Santa
@@ -378,15 +387,22 @@
         <div class="tab-pane fade" id="regalos">
           <div class="album py-5 bg-body-tertiary">
             <div class="container">
+              <h4>Regalos personalizados</h4>
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col-6 col-md-3">
                   <div class="card shadow-sm">
-                    <img
-                      class="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height="200"
-                      src="imagenes/caja-sorpresa-roja.jpg"
-                    />
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      onclick="openGiftModal('Product Name', ['imagenes/caja-sorpresa-roja.jpg', 'imagenes/caja-sorpresa-rosa.jpg', 'imagenes/caja-sorpresa-malva.jpg'], 'Caja Sorpresa')"
+                    >
+                      <img
+                        class="bd-placeholder-img card-img-top"
+                        width="100%"
+                        height="200"
+                        src="imagenes/caja-sorpresa-roja.jpg"
+                      />
+                    </a>
                     <div class="card-body">
                       <p class="card-text">Caja Sorpresa</p>
                       <p><strong>Precio ajustable</strong></p>
@@ -411,12 +427,18 @@
                 </div>
                 <div class="col-6 col-md-3">
                   <div class="card shadow-sm">
-                    <img
-                      class="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height="200"
-                      src="imagenes/cajas-regalo-negras.jpg"
-                    />
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      onclick="openGiftModal('Product Name', ['imagenes/cajas-regalo-negras.jpg', 'imagenes/cajas-regalo-rojas.jpg', 'imagenes/caja-regalo.jpg', 'imagenes/caja-regalo-abierta.jpg'], 'Caja de Regalo')"
+                    >
+                      <img
+                        class="bd-placeholder-img card-img-top"
+                        width="100%"
+                        height="200"
+                        src="imagenes/cajas-regalo-negras.jpg"
+                      />
+                    </a>
                     <div class="card-body">
                       <p class="card-text">Caja de regalo</p>
                       <p><strong>Precio ajustable</strong></p>
@@ -441,12 +463,18 @@
                 </div>
                 <div class="col-6 col-md-3">
                   <div class="card shadow-sm">
-                    <img
-                      class="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height="200"
-                      src="imagenes/combo-cilindro1.jpg"
-                    />
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      onclick="openGiftModal('Product Name', ['imagenes/combo-cilindro1.jpg', 'imagenes/combo-cilindro-estrella.jpg', 'imagenes/combo-cilindro-rosa.jpg', 'imagenes/combo-cilindro-peluche.jpg', 'imagenes/combo-cilindro-azul.jpg', 'imagenes/combos-cilindros.jpg'], 'Regalo personalizado: Base cilíndrica')"
+                    >
+                      <img
+                        class="bd-placeholder-img card-img-top"
+                        width="100%"
+                        height="200"
+                        src="imagenes/combo-cilindro1.jpg"
+                      />
+                    </a>
                     <div class="card-body">
                       <p class="card-text">
                         Regalo personalizado: Base cilíndrica
@@ -473,12 +501,18 @@
                 </div>
                 <div class="col-6 col-md-3">
                   <div class="card shadow-sm">
-                    <img
-                      class="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height="200"
-                      src="imagenes/regalo-personalizado-love.jpg"
-                    />
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      onclick="openGiftModal('Product Name', ['imagenes/regalo-personalizado-love.jpg'], 'Regalo personalizado: globo con letrero')"
+                    >
+                      <img
+                        class="bd-placeholder-img card-img-top"
+                        width="100%"
+                        height="200"
+                        src="imagenes/regalo-personalizado-love.jpg"
+                      />
+                    </a>
                     <div class="card-body">
                       <p class="card-text">
                         Regalo personalizado: globo con letrero
@@ -505,12 +539,18 @@
                 </div>
                 <div class="col-6 col-md-3">
                   <div class="card shadow-sm">
-                    <img
-                      class="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height="200"
-                      src="imagenes/regalo-oso-rosaa.jpg"
-                    />
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      onclick="openGiftModal('Product Name', ['imagenes/regalo-oso-rosaa.jpg', 'imagenes/regalo-oso-rosa-azul.jpg', 'imagenes/regalo-oso-rosa2.jpg'], 'Regalo personalizado con peluche y globo')"
+                    >
+                      <img
+                        class="bd-placeholder-img card-img-top"
+                        width="100%"
+                        height="200"
+                        src="imagenes/regalo-oso-rosaa.jpg"
+                      />
+                    </a>
                     <div class="card-body">
                       <p class="card-text">
                         Regalo personalizado con peluche y globo
@@ -537,16 +577,20 @@
                 </div>
                 <div class="col-6 col-md-3">
                   <div class="card shadow-sm">
-                    <img
-                      class="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height="200"
-                      src="imagenes/strap1.jpg"
-                    />
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      onclick="openGiftModal('Product Name', ['imagenes/strap1.jpg', 'imagenes/strap2.jpg', 'imagenes/strap3.jpg', 'imagenes/strap4.jpg'], 'Strap personalizado para anteojos')"
+                    >
+                      <img
+                        class="bd-placeholder-img card-img-top"
+                        width="100%"
+                        height="200"
+                        src="imagenes/strap1.jpg"
+                      />
+                    </a>
                     <div class="card-body">
-                      <p class="card-text">
-                        Strap personalizado para anteojos
-                      </p>
+                      <p class="card-text">Strap personalizado para anteojos</p>
                       <p><strong>$400.00</strong></p>
                       <div
                         class="d-flex justify-content-between align-items-center"
@@ -575,8 +619,8 @@
         <div class="tab-pane fade" id="bazar">
           <div class="album py-5 bg-body-tertiary">
             <div class="container">
+              <h4>Bazar</h4>
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <h4>Bazar</h4><br>
                 <div class="col-6 col-md-3">
                   <div class="card shadow-sm">
                     <img
@@ -747,15 +791,15 @@
               </div>
 
               <div class="modal-footer">
-              <a
-                href="https://wa.me/5352019912"
-                type="button"
-                class="btn btn-success mt-3"
-              >
-                <p>
-                  <i class="bi-whatsapp"> <strong>Hacer Pedido</strong></i>
-                </p>
-              </a>
+                <a
+                  href="https://wa.me/5352019912"
+                  type="button"
+                  class="btn btn-success mt-3"
+                >
+                  <p>
+                    <i class="bi-whatsapp"> <strong>Hacer Pedido</strong></i>
+                  </p>
+                </a>
               </div>
             </div>
           </div>
@@ -785,12 +829,12 @@
     <script>
       $(document).ready(function () {
         // Clonar y agregar elementos de la pestaña "Regalos"
-        var regalosClone = $("#regalos .row").clone();
-        regalosClone.find("h4").text("Regalos personalizados"); // Cambiar el texto del título
+        var regalosClone = $("#regalos .container").clone();
+        //regalosClone.find("h4").text("Regalos personalizados"); // Cambiar el texto del título
 
         // Clonar y agregar elementos de la pestaña "Bazar"
-        var bazarClone = $("#bazar .row").clone();
-        bazarClone.find("h4").text("Bazar"); // Cambiar el texto del título
+        var bazarClone = $("#bazar .container").clone();
+        //bazarClone.find("h4").text("Bazar"); // Cambiar el texto del título
 
         // Limpiar contenido existente en la pestaña "Todo"
         $("#all .row").empty();
