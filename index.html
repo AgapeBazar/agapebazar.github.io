@@ -164,9 +164,24 @@
       }
 
       .nav-tabs {
-        background-color: var(--bs-tertiary-bg);
+        background-color: var(--bs-body-bg);
         position: sticky;
         top: 55px;
+        z-index: 1;
+      }
+
+      .nav-tabs .nav-link.active {
+        background-color: var(--bs-tertiary-bg);
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Optional: This will align items to the start and end of the navbar */
+        height: 55px; /* Adjust as needed */
+        padding: 0;
+        z-index: 2;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
       }
     </style>
   </head>
@@ -195,119 +210,20 @@
       </symbol>
     </svg>
 
-    <div
-      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
-    >
-      <button
-        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-        id="bd-theme"
-        type="button"
-        aria-expanded="false"
-        data-bs-toggle="dropdown"
-        aria-label="Toggle theme (auto)"
-      >
-        <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
-          <use href="#circle-half"></use>
-        </svg>
-        <span class="visually-hidden" id="bd-theme-text">Cambiar tema</span>
-      </button>
-      <ul
-        class="dropdown-menu dropdown-menu-end shadow"
-        aria-labelledby="bd-theme-text"
-      >
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center"
-            data-bs-theme-value="light"
-            aria-pressed="false"
+    <header data-bs-theme="auto" class="sticky-top">
+      <nav class="navbar bg-body sticky-top" data-bs-theme="auto">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand"
+            style="font-size: 24px; font-family: Alex Brush"
+            href="#"
+            >Ágape</a
           >
-            <svg class="bi me-2 opacity-50" width="1em" height="1em">
-              <use href="#sun-fill"></use>
-            </svg>
-            Light
-            <svg class="bi ms-auto d-none" width="1em" height="1em">
-              <use href="#check2"></use>
-            </svg>
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center"
-            data-bs-theme-value="dark"
-            aria-pressed="false"
+          <a type="button" class="rounded-pill btn btn-success" href="#carrito">
+            <i class="bi-cart"></i> Carrito</a
           >
-            <svg class="bi me-2 opacity-50" width="1em" height="1em">
-              <use href="#moon-stars-fill"></use>
-            </svg>
-            Dark
-            <svg class="bi ms-auto d-none" width="1em" height="1em">
-              <use href="#check2"></use>
-            </svg>
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center active"
-            data-bs-theme-value="auto"
-            aria-pressed="true"
-          >
-            <svg class="bi me-2 opacity-50" width="1em" height="1em">
-              <use href="#circle-half"></use>
-            </svg>
-            Auto
-            <svg class="bi ms-auto d-none" width="1em" height="1em">
-              <use href="#check2"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-
-    <header data-bs-theme="dark" class="sticky-top">
-      <div class="collapse text-bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4>Acerca de</h4>
-              <p class="text-body-secondary">
-                Regalos personalizados para darle un toque único a tus momentos
-                especiales. Con Ágape tendrás la mejor calidad a los precios más
-                competitivos.
-              </p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4>Contactar</h4>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Whatsapp</a></li>
-                <li><a href="#" class="text-white">Instagram</a></li>
-                <li><a href="#" class="text-white">Facebook</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container">
-          <a href="#" class="navbar-brand d-flex align-items-center" style="font-family: Alex Brush; font-size: 25px;">
-            <img src="imagenes/heart.png" height="24" />
-            <strong> Ágape</strong>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarHeader"
-            aria-controls="navbarHeader"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
+      </nav>
     </header>
 
     <main>
@@ -321,10 +237,17 @@
       >
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light" style="font-family: Alex Brush; font-size: 40px; color: whitesmoke">
+            <h1
+              class="fw-light"
+              style="
+                font-family: Alex Brush;
+                font-size: 37px;
+                color: whitesmoke;
+              "
+            >
               Ágape: Regalos únicos
             </h1>
-            <p class="lead" style="color: whitesmoke">
+            <p class="lead" style="font-size: 18px; color: whitesmoke">
               <strong
                 >Regalos personalizados con un toque especial. Escriba a nuestro
                 Whatsapp y le atendemos enseguida. Con domicilio dentro de Santa
@@ -418,9 +341,13 @@
                         >
                           Ver
                         </button>
-                        <button type="button" class="btn btn-sm btn-success">
-                          Añadir
-                        </button>
+                        <a
+                          href="https://wa.me/5352019912"
+                          type="button"
+                          class="btn btn-sm btn-success"
+                        >
+                          <icon class="bi-whatsapp"> Hacer pedido</icon>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -454,9 +381,13 @@
                         >
                           Ver
                         </button>
-                        <button type="button" class="btn btn-sm btn-success">
-                          Añadir
-                        </button>
+                        <a
+                          href="https://wa.me/5352019912"
+                          type="button"
+                          class="btn btn-sm btn-success"
+                        >
+                          <icon class="bi-whatsapp"> Hacer pedido</icon>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -492,9 +423,13 @@
                         >
                           Ver
                         </button>
-                        <button type="button" class="btn btn-sm btn-success">
-                          Añadir
-                        </button>
+                        <a
+                          href="https://wa.me/5352019912"
+                          type="button"
+                          class="btn btn-sm btn-success"
+                        >
+                          <icon class="bi-whatsapp"> Hacer pedido</icon>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -530,9 +465,13 @@
                         >
                           Ver
                         </button>
-                        <button type="button" class="btn btn-sm btn-success">
-                          Añadir
-                        </button>
+                        <a
+                          href="https://wa.me/5352019912"
+                          type="button"
+                          class="btn btn-sm btn-success"
+                        >
+                          <icon class="bi-whatsapp"> Hacer pedido</icon>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -568,9 +507,13 @@
                         >
                           Ver
                         </button>
-                        <button type="button" class="btn btn-sm btn-success">
-                          Añadir
-                        </button>
+                        <a
+                          href="https://wa.me/5352019912"
+                          type="button"
+                          class="btn btn-sm btn-success"
+                        >
+                          <icon class="bi-whatsapp"> Hacer pedido</icon>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -604,9 +547,13 @@
                         >
                           Ver
                         </button>
-                        <button type="button" class="btn btn-sm btn-success">
-                          Añadir
-                        </button>
+                        <a
+                          href="https://wa.me/5352019912"
+                          type="button"
+                          class="btn btn-sm btn-success"
+                        >
+                          <icon class="bi-whatsapp"> Hacer pedido</icon>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -638,9 +585,13 @@
                         <button type="button" class="btn btn-sm btn-primary">
                           Ver
                         </button>
-                        <button type="button" class="btn btn-sm btn-success">
-                          Añadir
-                        </button>
+                        <a
+                          href="https://wa.me/5352019912"
+                          type="button"
+                          class="btn btn-sm btn-success"
+                        >
+                          <icon class="bi-whatsapp"> Hacer pedido</icon>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -662,9 +613,13 @@
                         <button type="button" class="btn btn-sm btn-primary">
                           Ver
                         </button>
-                        <button type="button" class="btn btn-sm btn-success">
-                          Añadir
-                        </button>
+                        <a
+                          href="https://wa.me/5352019912"
+                          type="button"
+                          class="btn btn-sm btn-success"
+                        >
+                          <icon class="bi-whatsapp"> Hacer pedido</icon>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -688,9 +643,13 @@
                         <button type="button" class="btn btn-sm btn-primary">
                           Ver
                         </button>
-                        <button type="button" class="btn btn-sm btn-success">
-                          Añadir
-                        </button>
+                        <a
+                          href="https://wa.me/5352019912"
+                          type="button"
+                          class="btn btn-sm btn-success"
+                        >
+                          <icon class="bi-whatsapp"> Hacer pedido</icon>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -714,9 +673,13 @@
                         <button type="button" class="btn btn-sm btn-primary">
                           Ver
                         </button>
-                        <button type="button" class="btn btn-sm btn-success">
-                          Añadir
-                        </button>
+                        <a
+                          href="https://wa.me/5352019912"
+                          type="button"
+                          class="btn btn-sm btn-success"
+                        >
+                          <icon class="bi-whatsapp"> Hacer pedido</icon>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -797,7 +760,9 @@
                   class="btn btn-success mt-3"
                 >
                   <p>
-                    <i class="bi-whatsapp"> <strong>Hacer Pedido</strong></i>
+                    <icon class="bi-whatsapp">
+                      <strong>Hacer Pedido</strong></icon
+                    >
                   </p>
                 </a>
               </div>
